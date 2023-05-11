@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+/* display: flex is a CSS property that is used to enable a container element to use the Flexible Box Layout, or "flexbox". 
+Flexbox is a layout mode that allows you to easily create a flexible and responsive layout for your web page content. */
+
+/* When display: flex is applied to a container element, it turns the element into a flex container. 
+This means that its direct child elements become "flex items" that can be manipulated with flexbox properties 
+to control their layout and positioning within the container. */
+/* Display:flex puts everything in row by default */
+
+/* box-sizing: border-box is a CSS property that changes the way the sizing of elements is calculated in a web page. By default, when you set the height
+ or width of an element, the height and width values only apply to the content area of the element. 
+The border-box value of the box-sizing property changes this behavior to include the element's padding and border within the specified height and width. */
+body{
+    font-family: 'Lato','sans-erif';
+    margin:0;
+   overflow-x:hidden;
+   background-color:#333;
+   color:#222;
+
+}
+*{
+    box-sizing: border-box;
+}
+.container{
+    background-color:#FAFAFA;
+    transform-origin:top left;
+    transition: transform 0.5s linear;
+    width:100vw;
+    min-height:100vh;
+    padding:50px;
+}
+.container.show-nav+nav li{
+    transform:translateX(0);
+    transition-delay:0.3s;
+}
+.content img{
+max-width:100%;
+}
+.container.show-nav{
+    transform:rotate(-20deg)
+
+}
+.circle-container{
+    position:fixed;
+    top:-100px;
+    left:-100px;
+   
+}
+.container.show-nav .circle{
+    transform:rotate(-70deg);
+}
+.circle{
+    width:200px;
+    background-color: #f97979;
+    height:200px; 
+    border-radius:100px;
+    position:relative;
+    transition :transform 0.5s linear;
+}
+.circle button{
+    position:absolute;
+    left:50%;
+    top:50%;
+    height:100px;
+    background: transparent;
+    border:0;
+    font-size:26px;
+    color:#fff;
+
+}
+.circle button :focus{
+    outline:none;
+}
+.circle button#open{
+    left:60%;
+}
+.circle button#close{
+top:60%;
+transform:rotate(90deg);
+transform-origin: top left;
+
+} 
+.content{
+    max-width:1000px;
+    margin:50px auto;
+}
+small{
+    font-style:italic;
+    color:#555;
+}
+.content h1{
+margin:0;
+}
+.content p{
+    line-height: 1.5;
+    color:#333;
+}
+nav{
+    position:fixed;
+    left:0;
+   bottom:40px;
+   z-index:100;
+}
+nav ul{
+    list-style: none;
+    padding-left:30px;
+}
+
+nav ul li{
+    text-transform: uppercase;
+    color:white;
+    margin:32px;
+    transform:translateX(-100%);
+    transition: transform 0.4s ease;
+}
+nav ul li i {
+font-size:20px;
+margin-right: 10px;
+}
+
+nav ul li:nth-child(2){
+    margin-left: 55px;
+    transform:translateX(-150%);
+
+}
+nav ul li:nth-child(3) {
+    margin-left: 70px;
+transform:translateX(-200%);
+
+}
