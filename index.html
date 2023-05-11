@@ -65,7 +65,7 @@
     color:rgb(147, 147, 151);
     transform:translateY(6%);
     transition: 0.4s ease;
-  text-decoration: none;
+ 
    
    }
    
@@ -73,6 +73,16 @@
     color:#657b50;
     text-decoration: none;
     
+    
+   }
+   a:hover.neonText{
+    color: rgb(11, 204, 140);
+    text-decoration: none;
+    
+   }
+   a:hover.neonText1{
+    color: #f09;
+    text-decoration: none;
     
    }
    .neonText {
@@ -89,10 +99,11 @@
       0 0 92px #0fa,
       0 0 102px #0fa,
       0 0 151px #0fa;
+      
 }
 
 .neonText1 {
- 
+    
     z-index:+2;
     color: #fff;
     font-family:"Vibur";
@@ -110,6 +121,7 @@
 
   a{
     margin: 20px 20px;
+    animation: pulsate 0.11s ease-in-out infinite alternate;   
   
   }
 </style>
