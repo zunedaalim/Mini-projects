@@ -1,140 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton&effect=neon">
-   
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Monoton&effect=neon"
+    />
+
     <title>Document</title>
-</head>
-<style>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Vibur&family=Wix+Madefor+Text&display=swap");
 
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Vibur&family=Wix+Madefor+Text&display=swap');
-
-    .container::before{
-        content:'';
-    position:absolute;
-    top: 0;
-    z-index: +1;
-    left:0px;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.7);
-    opacity:40%;
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      z-index: +1;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      opacity: 40%;
     }
-    *{
-        box-sizing: border-box;
+    * {
+      box-sizing: border-box;
     }
-    h1{
-        margin:0px;
+    h1 {
+      margin: 0px;
     }
-    body{
-        margin:0;
-        overflow:hidden;
-        font-family: Monoton;
-        font-size: em;
-        background: #111;
-        text-align: center;
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: Monoton;
+      font-size: em;
+      background: #111;
+      text-align: center;
     }
-   .container{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-   padding:0;
-   margin:0;
-   height:100vh;
-   width:100vw;
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
-    background-image: url("Explanding-cards/Pictures/8.jpg");
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      height: 100vh;
+      width: 100vw;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("Explanding-cards/Pictures/8.jpg");
+    }
+    a:link {
+      color: #47814b;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #47814b;
 
-   }
-   a:link{
-    color:#47814b;
-    text-decoration: none;
-   }
-   a:visited{
-    color:#47814b;
-   
-    text-decoration: none;
-  }
-   a:hover{
-    color:rgb(147, 147, 151);
-    transform:translateY(6%);
-    transition: 0.4s ease;
- 
-   
-   }
-   
-   a:active{
-    color:#657b50;
-    text-decoration: none;
-    
-    
-   }
-   a:hover.neonText{
-    color: rgb(11, 204, 140);
-    text-decoration: none;
-    
-   }
-   a:hover.neonText1{
-    color: #f09;
-    text-decoration: none;
-    
-   }
-   .neonText {
-    z-index:+2;
-  color: #fff;
-  font-family:"Vibur";
-  font-size: 1.5rem;
-  text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #0fa,
-      0 0 82px #0fa,
-      0 0 92px #0fa,
-      0 0 102px #0fa,
-      0 0 151px #0fa;
-      
-}
+      text-decoration: none;
+    }
+    a:hover {
+      color: rgb(147, 147, 151);
+      transform: translateY(6%);
+      transition: 0.4s ease;
+    }
 
-.neonText1 {
-    
-    z-index:+2;
-    color: #fff;
-    font-family:"Vibur";
-    font-size: 1.5rem;
-    text-shadow:
-    0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #f09,
-      0 0 82px #f09,
-      0 0 92px #f09,
-      0 0 102px #f09,
-      0 0 151px #f09;
-  }
+    a:active {
+      color: #657b50;
+      text-decoration: none;
+    }
+    a:hover.neonText {
+      color: rgb(11, 204, 140);
+      text-decoration: none;
+    }
+    a:hover.neonText1 {
+      color: #f09;
+      text-decoration: none;
+    }
+    a:hover.neonText2 {
+      color: #5271ff;
+      text-decoration: none;
+    }
+    .neonText {
+      z-index: +2;
+      color: #fff;
+      font-family: "Vibur";
+      font-size: 1.5rem;
+      text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+        0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+    }
 
-  a{
-    margin: 20px 20px;
-    animation: pulsate 0.11s ease-in-out infinite alternate;   
-  
-  }
-</style>
-<body>
-   
-    <div class="container" >
-     
-        <a class="neonText" href="/Explanding-cards" target="_blank"> <h1>Expanding cards</h1></a>
-      
-            <a class="neonText1" href="/Progress steps" target="_blank"> <h1> Progress Steps</h1></a> 
+    .neonText1 {
+      z-index: +2;
+      color: #fff;
+      font-family: "Vibur";
+      font-size: 1.5rem;
+      text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09,
+        0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
+    }
+    .neonText2 {
+      z-index: +2;
+      color: #fff;
+      font-family: "Vibur";
+      font-size: 1.5rem;
+      text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #5271ff,
+        0 0 82px #5271ff, 0 0 92px #5271ff, 0 0 102px #5271ff, 0 0 151px #5271ff;
+    }
+
+    a {
+      margin: 20px 20px;
+      animation: pulsate 0.11s ease-in-out infinite alternate;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <a class="neonText" href="/Explanding-cards" target="_blank">
+        <h1>Expanding cards</h1></a
+      >
+
+      <a class="neonText1" href="/Progress steps" target="_blank">
+        <h1>Progress Steps</h1></a
+      >
+      <a class="neonText2" href="/Rotating Navigation" target="_blank">
+        <h1>Rotating Navigation</h1></a
+      >
     </div>
     <!-- filter: brightness(120%); -->
-
-
-</body>
+  </body>
 </html>
