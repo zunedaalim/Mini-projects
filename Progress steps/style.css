@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+
+
+/* we use this property to make changes all the elements at once */
+/* we can change color by changing it only once in here */
+:root{
+/* The CSS :root pseudo-class selector is used to select the highest-level parent of a given specification. In the HTML specification, the :root is essentially equivalent to the html selector */
+
+--line-border-fill:#c355dc;
+/* he :empty CSS pseudo-class represents any element that has no children. */
+/* The fill property is used for setting the color of an SVG shape. It accepts any color value. */
+--line-border-empty:#e0e0e0;
+}
+
+
+body{
+    background-color:#f6f7fb;
+    font-family: 'Muli','sans-serif';
+    margin:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+   overflow:hidden;
+   background-image: url(Pictures/1.jpg);
+   background-repeat: no-repeat;
+   background-size:cover;
+   background-position: center;
+   
+}
+*{
+    box-sizing: border-box;
+}
+.container{
+    text-align:center;
+    
+    
+}
+.container::before{
+    content:'';
+position:absolute;
+top: 0;
+z-index: -2;
+left:0px;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+}
+
+.progress-container{
+  display:flex;
+   justify-content: space-between;
+   position:relative;
+   margin-bottom:30px;
+   width:350px;
+   max-width:100%;
+   /* Say your img original size is 300px and the body width is 500px. 
+   Width: 100% will make the img equal to 500px, disregarding the img original width. 
+   On the other hand if you say max-width: 100%. The img will jus be it’s original
+    since it’s not more than 500px, originally. Assuming the img width is, for example, 800px ,
+     then max-width will take into effect. */
+ 
+/* If you want a block-level element to fill any remaining space inside of its parent, then it's simple — just add width: 100% in your CSS declaration for that element */
+
+}
+.progress{
+    background-color:var(--line-border-fill);
+    position:absolute;
+    transform: translateY(-50%);
+    /* Here we are using translateY(-50%) to 1translate the line -50% of its own width to make it perfectly in the middle of the progress container */
+    left:0;
+    top: 50%;
+    height:4px;
+    width:0%;
+    z-index:-1;
+    transition:0.4s ease;
+
+}
+.progress-container::before{
+    content:'';
+    background-color: var(--line-border-empty);
+    position:absolute;
+    transform: translateY(-50%);
+    /* Here we are using translateY(-50%) to translate the line -50% of its own width to make it perfectly in the middle of the progress container */
+    left:0;
+    top: 50%;
+    height:4px;
+    width:100%;
+    z-index:-1;
+}
+.circle{
+    background-color:#222020;
+    color:#f0eded;
+    border-radius:50%;
+    height:30px;
+    width:30px;
+    display:flex;
+    justify-content: center;
+  align-items: center;
+border: 3px solid var(--line-border-empty);
+transition:0.4s ease;
+}
+.circle.active{
+    border-color:var(--line-border-fill);
+}
+.btn{
+    background-color: var(--line-border-fill);
+    color:  #fff;
+    border:0;
+    border-radius:6px;
+    cursor:pointer;
+    font-family:inherit;
+    padding:8px 30px;
+    margin:5px;
+    font-size:14px;
+}
+.btn:active{
+    transform: scale(0.97);
+}
+.btn:focus{
+    outline:0;
+}
+.btn:disabled{
+    background-color:grey;
+    cursor:not-allowed;
+}
