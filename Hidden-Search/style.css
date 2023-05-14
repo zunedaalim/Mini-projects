@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* display: flex is a CSS property that is used to enable a container element to use the Flexible Box Layout, or "flexbox". 
+Flexbox is a layout mode that allows you to easily create a flexible and responsive layout for your web page content. */
+
+/* When display: flex is applied to a container element, it turns the element into a flex container. 
+This means that its direct child elements become "flex items" that can be manipulated with flexbox properties 
+to control their layout and positioning within the container. */
+/* Display:flex puts everything in row by default */
+
+/* box-sizing: border-box is a CSS property that changes the way the sizing of elements is calculated in a web page. By default, when you set the height
+ or width of an element, the height and width values only apply to the content area of the element. 
+The border-box value of the box-sizing property changes this behavior to include the element's padding and border within the specified height and width. */
+body{
+    font-family: 'Roboto','sans-erif';
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background-image: linear-gradient(90deg, #7d5fff,#7158e2);
+
+}
+*{
+    box-sizing: border-box;
+}
+.search{
+    height:50px;
+    position:relative;
+
+ 
+
+}
+.search .input{
+    background-color:white;
+    border:0;
+ font-size:18px;
+ padding:15px;
+width:50px;
+border-radius:100%;
+ transition: width 0.4s linear;
+}
+.btn{
+    background-color:#fff;
+    border:0;
+    cursor:pointer;
+    font-size:30px;
+    position:absolute;
+    border-radius:100%;
+
+
+left:0;
+height: 50px;
+width:50px;
+transition:transform 0.4s linear;
+}
+.btn:focus,.input:focus{
+     outline:none;
+}
+.search.active .input{
+   width:200px;
+   border-radius:20px;
+}
+
+.search.active .btn{
+    transform:translateX(204px);
+}
