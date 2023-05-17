@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento');
+
+body{
+    font-family: 'Sacremento','sans-erif';
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+*{
+    box-sizing: border-box;
+}
+.bg{
+    height:100vh;
+    width:100vw;
+    position:relative;
+
+   
+}
+.video-container{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+   overflow:hidden;
+}
+.video-container video{
+   
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(30px);
+ 
+}
+.loading-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    color:white;
+  
+    transform: translate(-50%, -50%);
+
+
+    font-size: calc(5px + 6vh);
+    line-height: calc(5px + 10vh);
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+      color: #fff6a9;
+    font-family: "Sacramento", cursive;
+   
+    
+}
